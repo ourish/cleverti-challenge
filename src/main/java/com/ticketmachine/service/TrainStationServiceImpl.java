@@ -21,6 +21,13 @@ public class TrainStationServiceImpl implements TrainStationService {
   }
 
   @Override
+  public List<String> getAllTrainStations() {
+    return trainStationRepository.findAll().stream()
+        .map(TrainStation::getName)
+        .toList();
+  }
+
+  @Override
   public MatchingTrainStationResponse findMatchingTrainStations(String stationName) {
     final TrainStation input = new TrainStation(stationName);
     final ExampleMatcher matcher = ExampleMatcher.matchingAny()
@@ -33,14 +40,19 @@ public class TrainStationServiceImpl implements TrainStationService {
   private MatchingTrainStationResponse parseMatchingTrainStationResponse(List<TrainStation> matchingTrainStations,
       String input) {
 
+    if(matchingTrainStations.size() == 1) {
+      return new MatchingTrainStationResponse(null, matchingTrainStations.stream().map(TrainStation::getName).toList());
+    }
+
     final HashSet<Character> nextPossibleCharacters = new HashSet<>();
     final ArrayList<String> trainStationNames = new ArrayList<>();
 
     for(TrainStation trainStation : matchingTrainStations) {
       final String trainStationName = trainStation.getName();
       trainStationNames.add(trainStationName);
-      final char split = trainStationName.split(input)[1].charAt(0);
-      nextPossibleCharacters.add(split);
+      // if input is 'Ave', it will split Aveiro into Ave - iro
+      final String lastPartOfStationName = trainStationName.split(input)[1];
+      nextPossibleCharacters.add(lastPartOfStationName.charAt(0));
     }
     
     return new MatchingTrainStationResponse(nextPossibleCharacters, trainStationNames);
