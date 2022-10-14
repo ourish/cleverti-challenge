@@ -1,8 +1,8 @@
-package com.study.service;
+package com.ticketmachine.service;
 
-import com.study.domain.MatchingTrainStationResponse;
-import com.study.domain.TrainStation;
-import com.study.repositories.TrainStationRepository;
+import com.ticketmachine.domain.MatchingTrainStationResponse;
+import com.ticketmachine.domain.TrainStation;
+import com.ticketmachine.repositories.TrainStationRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.Example;

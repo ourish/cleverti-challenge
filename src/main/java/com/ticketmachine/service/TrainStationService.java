@@ -1,6 +1,6 @@
-package com.study.service;
+package com.ticketmachine.service;
 
-import com.study.domain.MatchingTrainStationResponse;
+import com.ticketmachine.domain.MatchingTrainStationResponse;
 
 public interface TrainStationService {
 

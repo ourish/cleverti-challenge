@@ -1,7 +1,7 @@
-package com.study.controllers;
+package com.ticketmachine.controllers;
 
-import com.study.domain.MatchingTrainStationResponse;
-import com.study.service.TrainStationService;
+import com.ticketmachine.domain.MatchingTrainStationResponse;
+import com.ticketmachine.service.TrainStationService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

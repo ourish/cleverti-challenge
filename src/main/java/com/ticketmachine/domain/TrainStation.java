@@ -1,4 +1,4 @@
-package com.study.domain;
+package com.ticketmachine.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

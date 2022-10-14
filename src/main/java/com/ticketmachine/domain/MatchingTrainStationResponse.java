@@ -1,4 +1,4 @@
-package com.study.domain;
+package com.ticketmachine.domain;
 
 import java.util.List;
 import java.util.Set;

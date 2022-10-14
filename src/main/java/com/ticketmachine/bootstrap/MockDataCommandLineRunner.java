@@ -1,7 +1,7 @@
-package com.study.bootstrap;
+package com.ticketmachine.bootstrap;
 
-import com.study.domain.TrainStation;
-import com.study.repositories.TrainStationRepository;
+import com.ticketmachine.domain.TrainStation;
+import com.ticketmachine.repositories.TrainStationRepository;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
