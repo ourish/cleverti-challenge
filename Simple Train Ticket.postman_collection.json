@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "1a34bd36-333f-4fe3-981d-52091ab5a399",
+		"name": "Simple Train Ticket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7518086"
+	},
+	"item": [
+		{
+			"name": "Get All Train Stations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/trainticketmachine/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"trainticketmachine",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Partial Train Station Result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/trainticketmachine/Ave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"trainticketmachine",
+						"Ave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Train Station Result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/trainticketmachine/Aveiro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"trainticketmachine",
+						"Aveiro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
